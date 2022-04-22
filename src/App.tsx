@@ -9,7 +9,7 @@ import TabPanel from "./tabs/TabPanel";
 import Transformer, { ParsedJson } from "./tabs/Transformer";
 
 import { InputTemplate } from "./templates/InputTemplate";
-import { TextField, Typography } from "@material-ui/core";
+import { createStyles, TextField, Typography } from "@material-ui/core";
 import { NumberFieldTemplate } from "./templates/NumberFieldTemplate";
 import { TextAreaTemplate } from "./templates/TextAreaTemplate";
 import { RadioTemplate } from "./templates/RadioTemplate";
@@ -25,12 +25,17 @@ function a11yProps(index: any) {
   };
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper
-  }
-}));
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+      overflow: 'hidden',
+      maxWidth: 800,
+      margin: `${theme.spacing(1)}px auto`,
+      padding: theme.spacing(2),
+    },
+  }),
+);
 
 export default function SimpleTabs() {
   const classes = useStyles();
@@ -116,7 +121,7 @@ export default function SimpleTabs() {
           fullWidth
           onChange={handleInputChange}
           value={jsonText}
-          rows={20}
+          minRows={20}
         />
       </TabPanel>
       <TabPanel value={value} index={1}>
