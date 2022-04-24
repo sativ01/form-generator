@@ -10,8 +10,8 @@ Please use this link for testing. The project is not tested locally
 {
   "title": { "label": "header" },
   "items": [
-    { "textfield": { "label": "heeey 01", "variant": "filled" } },
-    { "textfield": { "label": "heeey 02", "variant": "filled" } },
+    { "textfield": { "label": "filled", "variant": "filled" } },
+    { "textfield": { "label": "outlined", "variant": "outlined" } },
     { "dateflied": { "label": "custom date" } },
     { "numberfield": { "label": "Numberrrr", "value": "12" } },
     {

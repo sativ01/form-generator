@@ -59,7 +59,7 @@ export default class Transformer<T extends BaseTemplate> {
     const result: JSX.Element[] = [];
     try {
       inputsData.forEach((inputData) => {
-        const [inputType, props] = Object.entries(inputData)[0]; // they always contain a single recore
+        const [inputType, props] = Object.entries(inputData)[0]; // they always contain a single record
         const transformed = this.transformInput(
           inputType as SupportedInputs,
           props as InputProps

@@ -20,6 +20,6 @@ const RenderComponentJSX = (props: TextFieldProps) => (
 export const DateFieldTemplate = new BaseTemplate(
   "Input Template",
   TEMPLATES.dateflied,
-  new Set(["value", "label"]),
+  new Set(["value", "label", "defaultValue"]),
   RenderComponentJSX
 );

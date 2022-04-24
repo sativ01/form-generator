@@ -1,5 +1,5 @@
 import { BaseTemplate } from "./BaseTemplate";
-import TextField, { TextFieldProps } from "@material-ui/core/TextField";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
 import { TEMPLATES } from "../tabs/Transformer";
 
 const RenderComponentJSX = (props: TextFieldProps) => (

@@ -1,11 +1,12 @@
+import React from "react";
 import { BaseTemplate } from "./BaseTemplate";
 import { TEMPLATES } from "../tabs/Transformer";
 
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
 
 type IRadioProps = {
   label: string;
@@ -16,20 +17,21 @@ type IRadioProps = {
 const RenderComponentJSX = ({
   values = ["yes", "no"],
   selectedValue,
-  label = "Chose:"
+  label = "Chose:",
 }: IRadioProps) => {
+
   const labels = values.map((value) => (
-    <FormControlLabel value={value} control={<Radio />} label={value} />
+    <FormControlLabel
+      value={value}
+      control={<Radio />}
+      label={value}
+    />
   ));
 
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">{label}</FormLabel>
-      <RadioGroup
-        aria-label="options"
-        name="options"
-        value={selectedValue ?? values[0]}
-      >
+      <RadioGroup aria-label="options" name="options" defaultValue={selectedValue ?? values[0]}>
         {labels}
       </RadioGroup>
     </FormControl>
