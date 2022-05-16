@@ -31,9 +31,11 @@ These properties will be passed to the rendering function as `props` and used ac
 General architecture is made to be modular. Every supported item only implements the list of supported props and it's own renderer.
 Addition of a new item is straight forward hence scaling is made to be easy
 
-### Codesandbox [link](https://codesandbox.io/s/awesome-breeze-vl9fou?file=/README.md)
-
-Please use this link for testing. The project is not tested locally
+### Running
+```bash
+yarn install && yarn start
+# npm install && npm start
+```
 
 ## Sample JSON for testing:
 
